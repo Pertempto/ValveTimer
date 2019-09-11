@@ -1,4 +1,4 @@
-package com.github.pertempto.valvetimer;
+package application;
 
 import android.app.Application;
 
