@@ -11,9 +11,15 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            buildConfigField 'String', "RESTDB_KEY", VALVE_TIMER_RESTDB_KEY
+            buildConfigField 'String', "RESTDB_URL", VALVE_TIMER_RESTDB_URL
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', "RESTDB_KEY", VALVE_TIMER_RESTDB_KEY
+            buildConfigField 'String', "RESTDB_URL", VALVE_TIMER_RESTDB_URL
         }
     }
     sourceSets {
